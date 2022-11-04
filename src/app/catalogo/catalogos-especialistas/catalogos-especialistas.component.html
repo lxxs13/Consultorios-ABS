@@ -1,0 +1,17 @@
+<div id="especialistas-list">
+  <mat-card *ngFor="let especialista of especialistas" class="card">
+    <mat-card-header style="justify-content: center;">
+      <mat-card-title>{{ especialista.especilidad }}</mat-card-title>
+    </mat-card-header>
+    <div id="photo-design">
+      <img src="../../../assets/images/foto medico.png" alt="Foto especialista">
+    </div>
+    <mat-card-content>
+        <span>{{ especialista.nombre }}</span>
+        <span>{{ especialista.costoConsulta | currency }}</span>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button (click)="onAgendarCita(especialista.id)">Agendar cita</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

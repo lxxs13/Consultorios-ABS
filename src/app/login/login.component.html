@@ -1,0 +1,51 @@
+<router-outlet></router-outlet>
+<div id="div-main-log-in" class="animate__animated animate__fadeIn">
+    <form [formGroup]="formGroupSignin" novalidate>
+        <div id="div-log-in-fields-button">
+            <div id="div-fields-log-in" style="z-index: 100;">
+                <span id="header-login-text">Iniciar sesi&oacute;n</span>
+                <span id="register-user-text">¿No tienes una cuenta?
+                    <a routerLink="register">
+                        Registrate aqu&iacute;
+                    </a>
+                </span>
+                <mat-divider class="space-mat-divider"></mat-divider>
+                <mat-form-field appearance="outline">
+                    <mat-label>Correo electr&oacute;nico</mat-label>
+                    <input matInput placeholder="Ingrese su correo electr&oacute;nico" formControlName="email"
+                        (keyup.enter)="onEnter()">
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                    <mat-error *ngIf="errorHandling('email', 'maxlength')">
+                        N&uacute;mero de caracteres m&aacute;ximo de 30
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('email', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('email', 'email')">
+                        Formato de correo electr&oacute;nico inv&aacute;lido
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Contrase&ntilde;a</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="Ingrese su contrase&ntilde;a"
+                        formControlName="password" (keydown.enter)="onEnter()">
+                    <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility_off' : 'visibility' }}
+                    </mat-icon>
+
+                    <mat-error *ngIf="errorHandling('password', 'maxlength')">
+                        N&uacute;mero de caracteres m&aacute;ximo de 30
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('password', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <a id="a-recuperar" href="forgotPassword">
+                    ¿Olvidaste tu contrase&ntilde;a?
+                </a>
+                <button mat-raised-button class="button-login" (click)="onEnter()">Iniciar sesi&oacute;n</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,46 @@
+mat-card-title-group {
+    display: flex;
+    justify-content: center;
+}
+
+.inline-calendar-card {
+    width: 300px;
+}
+
+.datepicker-table-select-date {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.description-text-align {
+    text-align: justify;
+    margin: 30px;
+}
+
+.foto-descripcion-container {
+    width: 90vw;
+    height: 100px;
+    background-color: aqua;
+}
+
+.card {
+    margin: 20px;
+    background-color: #ffffff;
+}
+
+.photo-description-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+::ng-deep .mat-calendar-body-selected {
+    color: #ffffff;
+    background-color: #FF6370;
+}
+
+::ng-deep .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: #ff637056;
+}

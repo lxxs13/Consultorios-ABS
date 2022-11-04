@@ -1,0 +1,72 @@
+a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #FF6370;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #9e2832;
+}
+
+#a-recuperar {
+    text-align: end;
+}
+
+#div-fields-log-in {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 1.5rem;
+    z-index: 10;
+}
+
+#div-log-in-fields-button {
+    width: 100%;
+    min-width: 364px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border: solid 1px silver;
+    border-radius: 10px;
+    box-shadow: 8px 8px 36px #888888,
+        -8px -8px 36px #ffffff;
+    z-index: 10;
+}
+
+#div-main-log-in {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#forgot-password {
+    text-align: start;
+}
+
+#header-login-text {
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#register-user-text {
+    font-size: 12px;
+    text-align: center;
+}
+
+.background-design {
+    background-image: url('../../assets/images/fondo.png');
+}
+
+.space-mat-divider {
+    margin: 10px 0;
+}
+
+.example {
+    z-index: 2;
+}

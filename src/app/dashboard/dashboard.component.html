@@ -1,0 +1,73 @@
+<div class="animate__animated animate__fadeIn">
+  <div class="div-button-acceso-rapido-toggle" *ngIf="!(isHandset$ | async)">
+    <button mat-mini-fab matTooltip="{{ sidenav.opened ? 'Cerrar' : 'Abrir'}}" matTooltipPosition="right"
+      matTooltipShowDelay="0" (click)="sidenav.toggle()"
+      [class]=" sidenav.opened ? 'btn-toggle-sidenav' : 'btn-toggle-sidenav-close'" color="primary">
+      <mat-icon class="btn-mat-icon-margin">
+        {{ sidenav.opened ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}
+      </mat-icon>
+    </button>
+  </div>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>
+        <img src="../../assets/images/logo.png" alt="Logo">
+        &nbsp;
+        <strong>Consultorio</strong>
+      </mat-toolbar>
+      <mat-nav-list>
+        <div id="div-navegation">
+          <div>
+            <a mat-list-item (click)="showComponent('Dashboard')">
+              <mat-icon class="margin mat-icon-size">dashboard</mat-icon> &nbsp; Dashboard
+            </a>
+            <a mat-list-item mat-list-item (click)="showComponent('Mis Citas')">
+              <mat-icon class="margin mat-icon-size">calendar_today</mat-icon> &nbsp; Mis citas
+            </a>
+            <a mat-list-item (click)="showComponent('Mis Pacientes')">
+              <mat-icon class="margin mat-icon-size">people</mat-icon> &nbsp; Mis pacientes
+            </a>
+          </div>
+          <div>
+            <a mat-list-item (click)="showComponent('Configuracion')">
+              <mat-icon class="margin mat-icon-size">settings</mat-icon> &nbsp; Configuraci&oacute;n
+            </a>
+            <a mat-list-item (click)="logout()">
+              <mat-icon class="margin mat-icon-size">exit_to_app</mat-icon> &nbsp; Cerrar sesi&oacute;n
+            </a>
+          </div>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <!-- <span>Consultorio</span> -->
+        <!-- <mat-form-field class="example-form-field" appearance="legacy">
+      <mat-label>Buscar especialista</mat-label>
+      <input matInput type="text" matTooltip="Buscar especialista">
+      <mat-icon>search</mat-icon>
+    </mat-form-field> -->
+      </mat-toolbar>
+      <div [ngSwitch]="optionSelected">
+        <div *ngSwitchCase="'Dashboard'">
+          <app-catalogos-especialistas></app-catalogos-especialistas>
+        </div>
+        <div *ngSwitchCase="'Mis Citas'">
+          <app-mis-citas></app-mis-citas>
+        </div>
+        <div *ngSwitchCase="'Mis Pacientes'">
+          <app-mis-pacientes></app-mis-pacientes>
+        </div>
+        <div *ngSwitchCase="'Configuracion'">
+          <app-configuracion></app-configuracion>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
