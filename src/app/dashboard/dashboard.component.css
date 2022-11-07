@@ -50,7 +50,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   margin-left: 180px;
   width: 30px;
@@ -63,7 +63,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   margin-left: -15px;
   width: 30px;

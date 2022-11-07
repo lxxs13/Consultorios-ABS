@@ -1,0 +1,80 @@
+<div id="div-main-log-in" class="animate__animated animate__fadeIn">
+    <form [formGroup]="formGroupSignup" novalidate>
+        <div id="div-log-in-fields-button">
+            <div id="div-fields-log-in" style="z-index: 100;">
+                <div id="header-register-user">
+                    <button mat-raised-button matTooltip="Regresar" matTooltipShowDelay="625" 
+                    routerLink="">
+                        <mat-icon>keyboard_arrow_left</mat-icon>
+                    </button>
+                    <span id="header-login-text">Registrar cuenta</span>
+                </div>
+
+                <mat-divider class="space-mat-divider"></mat-divider>
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre completo</mat-label>
+                    <input matInput placeholder="Nombre completo" formControlName="name">
+                    <mat-icon matSuffix>person_add</mat-icon>
+                    <mat-error *ngIf="errorHandling('email', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Fecha de nacimiento</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="birthdate">
+                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Correo electr&oacute;nico</mat-label>
+                    <input matInput placeholder="Ingrese su correo electr&oacute;nico" formControlName="email"
+                        (keyup.enter)="onEnter()">
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                    <mat-error *ngIf="errorHandling('email', 'maxlength')">
+                        N&uacute;mero de caracteres m&aacute;ximo de 30
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('email', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('email', 'email')">
+                        Formato de correo electr&oacute;nico inv&aacute;lido
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Contrase&ntilde;a</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="Ingrese su contrase&ntilde;a"
+                        formControlName="password" (keydown.enter)="onEnter()">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+                    <mat-error *ngIf="errorHandling('password', 'maxlength')">
+                        N&uacute;mero de caracteres m&aacute;ximo de 30
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('password', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirmar contrase&ntilde;a</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'"
+                        placeholder="Ingrese su contrase&ntilde;a de nuevo" formControlName="confirmPassword"
+                        (keydown.enter)="onEnter()">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+                    <mat-error *ngIf="errorHandling('confirmPassword', 'maxlength')">
+                        N&uacute;mero de caracteres m&aacute;ximo de 30
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('confirmPassword', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button class="button-login" (click)="onEnter()">Registrarme</button>
+            </div>
+        </div>
+    </form>
+</div>

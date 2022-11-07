@@ -9,15 +9,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { LoginComponent } from './login/login.component';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { CatalogoModule } from './catalogo/catalogo.module';
 import { AgendarCitaComponent } from './agendar-cita/agendar-cita.component';
-import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-import { ConfiguracionComponent } from './catalogo/configuracion/configuracion.component';
-import { MisCitasComponent } from './catalogo/mis-citas/mis-citas.component';
-import { MisPacientesComponent } from './catalogo/mis-pacientes/mis-pacientes.component';
+import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +20,7 @@ import { MisPacientesComponent } from './catalogo/mis-pacientes/mis-pacientes.co
     DashboardComponent,
     LoginComponent,
     AgendarCitaComponent,
+    RegistrarUsuarioComponent,
   ],
   imports: [
     BrowserModule,

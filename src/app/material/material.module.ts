@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -36,6 +37,7 @@ import { MatTableModule } from '@angular/material/table';
     MatCardModule,
     MatCheckboxModule,
     MatTableModule,
+    MatSnackBarModule,
   ]
 })
 export class MaterialModule { }

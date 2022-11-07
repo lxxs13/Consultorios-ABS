@@ -57,8 +57,39 @@ export class CatalogosEspecialistasComponent implements OnInit {
       especilidad: "Psicología",
       nombre: "Doc. Juan Arturo",
       costoConsulta: 200,
+    },
+    {
+      id: 9,
+      especilidad: "Dentista",
+      nombre: "Doc. Juan Arturo",
+      costoConsulta: 200,
+    },
+    {
+      id: 10,
+      especilidad: "Médico general",
+      nombre: "Doc. Juan Arturo",
+      costoConsulta: 200,
+    },
+    {
+      id: 11,
+      especilidad: "Dentista",
+      nombre: "Doc. Juan Arturo",
+      costoConsulta: 200,
+    },
+    {
+      id: 12,
+      especilidad: "Médico general",
+      nombre: "Doc. Juan Arturo",
+      costoConsulta: 200,
+    },
+    {
+      id: 13,
+      especilidad: "Psicología",
+      nombre: "Doc. Juan Arturo",
+      costoConsulta: 200,
     }
   ];
+  
   constructor(private _router: Router) { }
 
   onAgendarCita(especialistaID: number){
