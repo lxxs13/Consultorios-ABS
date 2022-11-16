@@ -15,6 +15,7 @@ export class AuthService {
       birthDate: new Date(),
     },
   ];
+  
   constructor() { }
 
   login(data: UserModel){
