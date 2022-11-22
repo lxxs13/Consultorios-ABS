@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "DM Sans Regular";
+    src: local("DM Sans Regular"), url(./assets/fonts/DMSans-Regular.ttf) format("truetype");
+}
 
 html,
 body {
@@ -7,7 +11,7 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'DM Sans Regular';
 }
 
 .mat-flat-button,
@@ -26,3 +30,8 @@ body {
     align-items: center;
     text-align: center;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }

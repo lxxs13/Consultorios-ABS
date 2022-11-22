@@ -1,17 +1,31 @@
-<div id="especialistas-list">
-  <mat-card *ngFor="let especialista of especialistas" class="card">
-    <mat-card-header style="justify-content: center;">
-      <mat-card-title>{{ especialista.especilidad }}</mat-card-title>
-    </mat-card-header>
-    <div id="photo-design">
-      <img src="../../../assets/images/foto medico.png" alt="Foto especialista">
-    </div>
-    <mat-card-content>
+<div *ngIf="visible" class="animate__animated animate__fadeIn">
+  <div class="filter">
+    <mat-toolbar style="margin: 0 0 10px -10px; color: #FFF;" color="primary">
+      Especialistas
+    </mat-toolbar>
+    <mat-form-field>
+      <mat-label>Buscar por nombre o especialidad</mat-label>
+      <input matInput #inputEspecialista (keyup)="applyFilter(inputEspecialista.value)" placeholder="Ej. Médico General, Psicología...">
+    </mat-form-field>
+  </div>
+
+  <div id="especialistas-list">
+    <mat-card *ngFor="let especialista of especialistasTemp" class="card">
+      <mat-card-header style="justify-content: center;">
+        <mat-card-title>{{ especialista.especilidad }}</mat-card-title>
+      </mat-card-header>
+      <div id="photo-design">
+        <img src="../../../assets/images/foto medico.png" alt="Foto especialista">
+      </div>
+      <mat-card-content>
         <span>{{ especialista.nombre }}</span>
         <span>{{ especialista.costoConsulta | currency }}</span>
-    </mat-card-content>
-    <mat-card-actions align="end">
-      <button mat-button (click)="onAgendarCita(especialista.id)">Agendar cita</button>
-    </mat-card-actions>
-  </mat-card>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button (click)="onAgendarCita(especialista.id)">Agendar cita</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
+
+<app-agendar-cita *ngIf="!visible" [dataEspecialista]="dataToSend"></app-agendar-cita>

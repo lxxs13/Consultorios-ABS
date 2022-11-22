@@ -13,13 +13,15 @@ import { CatalogoModule } from './catalogo/catalogo.module';
 import { AgendarCitaComponent } from './agendar-cita/agendar-cita.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { AgendarCitaModule } from './agendar-cita/agendar-cita.module';
+import { MatPaginatorIntl } from '@angular/material/paginator';
+import { MisCitasComponent } from './catalogo/mis-citas/mis-citas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     LoginComponent,
-    AgendarCitaComponent,
     RegistrarUsuarioComponent,
   ],
   imports: [
@@ -39,6 +41,10 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
       // cambia el lenguaje de los componentes del datePicker a español
       provide: MAT_DATE_LOCALE, 
       useValue: 'es-MX' 
+    },
+    {
+      provide: MatPaginatorIntl, 
+      useClass: MisCitasComponent
     }
   ],
   bootstrap: [AppComponent]

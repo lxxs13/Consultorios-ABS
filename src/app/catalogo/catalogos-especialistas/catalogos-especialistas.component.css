@@ -2,6 +2,10 @@ img {
     width: 100px;
 }
 
+mat-form-field {
+    width: 99%;
+}
+
 mat-card-content {
     display: flex;
     flex-direction: column;
@@ -18,7 +22,7 @@ mat-card-content {
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #photo-design {
@@ -42,4 +46,21 @@ mat-card-content {
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    #especialistas-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.filter {
+    width: 99%;
+    margin-top: 10px;
+    margin: 0px 10px;
 }

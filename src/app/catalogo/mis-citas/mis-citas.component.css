@@ -1,0 +1,21 @@
+tr {
+    background-color: #ff63703a;
+}
+
+tr[mat-row].elemento-renglon:nth-child(odd) {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+tr[mat-row].elemento-renglon:nth-child(even) {
+    background-color: #ff637023;
+    cursor: pointer;
+}
+
+tr[mat-row].elemento-renglon:nth-child(odd):hover {
+    background: #f5f5f5;
+}
+
+tr[mat-row].elemento-renglon:nth-child(even):hover {
+    background: #f5f5f5;
+}
