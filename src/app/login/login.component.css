@@ -19,7 +19,8 @@ a:hover {
     justify-content: flex-start;
     flex-direction: column;
     padding: 1rem 1rem 1rem 1.5rem;
-    z-index: 10;
+    background-color: aliceblue;
+    border-radius: 10px;
 }
 
 #div-log-in-fields-button {

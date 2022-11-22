@@ -19,7 +19,11 @@ a:hover {
     justify-content: flex-start;
     flex-direction: column;
     padding: 1rem 1rem 1rem 1.5rem;
-    z-index: 10;
+    background-color: aliceblue;
+    border: solid 1px silver;
+    border-radius: 10px;
+    box-shadow: 8px 8px 36px #888888,
+        -8px -8px 36px #ffffff;
 }
 
 #div-log-in-fields-button {
@@ -54,7 +58,7 @@ a:hover {
     margin-bottom: 0.5rem;
 }
 
-#header-register-user{
+#header-register-user {
     display: flex;
     justify-content: space-between;
 }
