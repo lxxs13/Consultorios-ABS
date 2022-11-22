@@ -19,3 +19,7 @@ tr[mat-row].elemento-renglon:nth-child(odd):hover {
 tr[mat-row].elemento-renglon:nth-child(even):hover {
     background: #f5f5f5;
 }
+
+table{
+    min-width: 500px;
+}
