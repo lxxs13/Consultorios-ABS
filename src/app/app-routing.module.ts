@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AgendarCitaComponent } from './agendar-cita/agendar-cita.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {
@@ -20,8 +21,8 @@ const routes: Routes = [
     component: RegistrarUsuarioComponent,
   },
   {
-    path: 'agendarCita/:id',
-    component: AgendarCitaComponent,
+    path: 'recoverPassword',
+    component: ForgotPasswordComponent,
   },
 ];
 

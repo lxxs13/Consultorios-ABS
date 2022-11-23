@@ -16,6 +16,7 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
 import { AgendarCitaModule } from './agendar-cita/agendar-cita.module';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { MisCitasComponent } from './catalogo/mis-citas/mis-citas.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MisCitasComponent } from './catalogo/mis-citas/mis-citas.component';
     DashboardComponent,
     LoginComponent,
     RegistrarUsuarioComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
