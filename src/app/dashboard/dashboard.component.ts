@@ -23,10 +23,7 @@ export class DashboardComponent implements OnInit, AfterContentInit {
   constructor(private breakpointObserver: BreakpointObserver, private _router: Router, private _auth: AuthService) {}
   
   ngOnInit(): void {
-    debugger
-    if(this._auth.users.length === 1){
-      this._router.navigate(['/']);
-    }
+
   }
 
   ngAfterContentInit(): void {
