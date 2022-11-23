@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-forgot-password',
@@ -11,7 +12,7 @@ export class ForgotPasswordComponent implements OnInit {
     email: new FormControl('', [Validators.email, Validators.required]),
   });
 
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +27,15 @@ export class ForgotPasswordComponent implements OnInit {
       return;
     }
 
+    this.openSnackBar("La contraseña fue enviada a su correo electrónico")
+
+  }
+
+  openSnackBar(msg: string) {
+    this._snackBar.open(msg, undefined, {
+      duration: 5000,
+      panelClass: ['blue-snackbar']
+    });
   }
 
 }
