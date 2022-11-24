@@ -17,6 +17,7 @@ import { AgendarCitaModule } from './agendar-cita/agendar-cita.module';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { MisCitasComponent } from './catalogo/mis-citas/mis-citas.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     DashboardComponent,
     LoginComponent,
     RegistrarUsuarioComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

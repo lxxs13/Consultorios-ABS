@@ -8,7 +8,7 @@ tr[mat-row].elemento-renglon:nth-child(odd) {
 }
 
 tr[mat-row].elemento-renglon:nth-child(even) {
-    background-color: #ff637023;
+    background-color: #da752222;
     cursor: pointer;
 }
 
@@ -20,6 +20,60 @@ tr[mat-row].elemento-renglon:nth-child(even):hover {
     background: #f5f5f5;
 }
 
-table{
-    min-width: 500px;
+table {
+    min-width: 800px;
+}
+
+.mydivoutermulti {
+    position: relative;
+    /* background: #f90; */
+    /* width: 130px; */
+    height: 50px;
+    /* float: left; */
+    /* margin-right: 15px; */
+}
+
+.buttonoverlapmulti {
+    /* position: absolute; */
+    z-index: 2;
+    /* top: 33px; */
+    display: none;
+    /* left: 19px; */
+    /* width: 92px; */
+}
+
+.mydivoutermulti:hover .buttonoverlapmulti {
+    display: block;
+}
+
+.sinConfirmarCita{
+    color: red;
+}
+
+.citaConfirmada{
+    color: green;
+}
+
+@media screen and (max-width: 768px) {
+    .mydivoutermulti {
+        position: relative;
+        /* background: #f90; */
+        /* width: 130px; */
+        height: 50px;
+        /* float: left; */
+        /* margin-right: 15px; */
+    }
+
+    .buttonoverlapmulti {
+        /* position: absolute; */
+        z-index: 1;
+        /* top: 33px; */
+        display: none;
+        /* left: 19px; */
+        /* width: 92px; */
+    }
+
+    .mydivoutermulti:hover .buttonoverlapmulti {
+        display: block;
+    }
 }

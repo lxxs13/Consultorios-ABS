@@ -11,7 +11,7 @@ export class CitasService {
         especialidad: "",
         fecha: undefined,
         hora: undefined,
-        confirmarAsistencia: undefined
+        confirmarAsistencia: false
     };
     misCitasList: CitasModel[] = [];
 
@@ -20,12 +20,10 @@ export class CitasService {
     }
 
     getCitasList() {
-        debugger
         return this.misCitasList;
     }
 
     postAgendarCita(cita: CitasModel, horasList: Horario[]) {
-        debugger
         if (cita == undefined)
             return;
 
@@ -38,7 +36,7 @@ export class CitasService {
                 especialidad: "",
                 fecha: undefined,
                 hora: undefined,
-                confirmarAsistencia: undefined
+                confirmarAsistencia: false
             }
             
             this.misCitas.doctor = cita.doctor;

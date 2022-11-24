@@ -28,7 +28,7 @@ export class AgendarCitaComponent implements OnInit, AfterViewInit {
     especialidad: '',
     fecha: new Date(),
     hora: undefined,
-    confirmarAsistencia: undefined
+    confirmarAsistencia: false
   };
   hide: boolean = false;
   horarios: Horario[] = [

@@ -4,5 +4,5 @@ export interface CitasModel{
     especialidad: string;
     fecha: Date | undefined;
     hora: Horario | undefined;
-    confirmarAsistencia: any;
+    confirmarAsistencia: boolean;
 }

@@ -101,7 +101,7 @@ tr[mat-row].elemento-renglon:nth-child(odd) {
 }
 
 tr[mat-row].elemento-renglon:nth-child(even) {
-    background-color: #ff637023;
+    background-color: #da752222;
     cursor: pointer;
 }
 
